@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$bright-orange : hsl(31, 77%, 52%);
+$dark-cyan : hsl(184, 100%, 22%);
+$very-dark-cyan : hsl(179, 100%, 13%);
+$transparent-white : hsla(0, 0%, 100%, 0.75);
+$very-light-grey : hsl(0, 0%, 95%);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2rem;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    background-color: $transparent-white;
+    font-family: 'Lexend Deca';
+    color: $transparent-white;
+}
+
+@mixin flex($direction,$align) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+}
+
+@mixin colors($color) {
+    background-color: $color;
+    & button {
+        color: $color;
+    }
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    height : 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    @include flex(row,center);
+    .wrapper {
+        height: 100%;
+        @include flex(column,flex-start);
+        gap : 1.5rem;
+        padding: 2rem;
+        .title {
+            font-family: 'Big Shoulders Display';
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $very-light-grey;
+            font-size: 1.7rem;;
+        }
+        .text {
+            font-size: 14px;
+        }
+        button {
+            font-family: 'Lexend Deca';
+            margin-top: auto;
+            background-color: $very-light-grey;
+            border: 2px solid $very-light-grey;
+            padding: .7rem 1.5rem;
+            border-radius: 50px;
+            &:hover {
+                cursor: pointer;
+            }
+            &:focus {
+                background-color: transparent;
+                color: $transparent-white
+            }
+        }
+    }
+    .sed {
+        @include colors($bright-orange);
+    }
+    .suv {
+        @include colors($dark-cyan);
+    }
+    .lux {
+        @include colors($very-dark-cyan);
+    }
+}
+
+@media (max-width : 620px) {
+    .container {
+        @include flex(column, center);
+        height : fit-content;
+        width: 300px;
+    }
+}

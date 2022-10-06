@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2rem;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  background-color: hsla(0deg, 0%, 100%, 0.75);
+  font-family: "Lexend Deca";
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.container .wrapper .title {
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: hsl(0deg, 0%, 95%);
+  font-size: 1.7rem;
+}
+.container .wrapper .text {
+  font-size: 14px;
+}
+.container .wrapper button {
+  font-family: "Lexend Deca";
+  margin-top: auto;
+  background-color: hsl(0deg, 0%, 95%);
+  border: 2px solid hsl(0deg, 0%, 95%);
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+}
+.container .wrapper button:hover {
+  cursor: pointer;
+}
+.container .wrapper button:focus {
+  background-color: transparent;
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+.container .sed {
+  background-color: hsl(31deg, 77%, 52%);
+}
+.container .sed button {
+  color: hsl(31deg, 77%, 52%);
+}
+.container .suv {
+  background-color: hsl(184deg, 100%, 22%);
+}
+.container .suv button {
+  color: hsl(184deg, 100%, 22%);
+}
+.container .lux {
+  background-color: hsl(179deg, 100%, 13%);
+}
+.container .lux button {
+  color: hsl(179deg, 100%, 13%);
+}
+
+@media (max-width: 620px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 300px;
+  }
+}/*# sourceMappingURL=style.css.map */
